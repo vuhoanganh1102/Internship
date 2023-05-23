@@ -1,0 +1,47 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family:sans-serif;
+}
+#available_job{
+    display: flex;
+    padding-bottom: 20px;
+    flex-direction: row;
+}
+#available_job .toggle_job{
+    display:flex;
+    padding-left: 10%;
+    flex-direction: column;
+    border-right:#e71a0f solid 4px;
+}
+.toggle_job .toggle_job_title{
+    display: flex;
+    background-color: #e71a0f;
+    justify-content: center;
+    width: 200px;
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+    transition-timing-function: ease;
+    transition: width 1s;
+}
+.toggle_job_title:hover{
+    width: 250px;
+}
+#available_job .main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin:0 10%;
+
+}
+#available_job .main .career-recruitment-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main .career-recruitment-content ul li a{
+    text-decoration: none;
+}

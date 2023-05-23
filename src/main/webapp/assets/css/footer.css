@@ -1,0 +1,77 @@
+#footer{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+#footer .brand{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:10px;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    padding: 5px 0;
+}
+#footer .content-cgv-center{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-bottom: 3px solid black;
+}
+#footer .content-cgv-center .content-cgv-policy{
+    width:980px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 5px 0;
+}
+#footer .content-cgv-policy li{
+    list-style-type: none;
+    margin-bottom: 5px;
+}
+#footer .content-cgv-policy li a{
+    text-decoration: none;
+    color: #636363;
+}
+#footer .content-cgv-policy h3{
+    margin-bottom: 10px;
+    color: #636363;
+}
+#footer .content-cgv{
+    margin-left:20px;
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+#footer .content-cgv-policy .cgv-follow-us .cgv-follow-us-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#footer .cgv-follow-us .cgv-follow-us-logo li{
+    margin-left: 5px;
+}
+#footer .text-cgv-address-center{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+#footer .text-cgv-address-center .text-cgv-address{
+    display: flex;
+    width: 980px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 14px;
+    font-family: sans-serif;
+    color: #636363;
+    margin-bottom: 20px;
+}
+#footer .footer-banner{
+
+    width: 100%;
+    height: 140px;
+}
