@@ -18,9 +18,9 @@
     <link rel="stylesheet" href="./assets/css/content.css">
 
     <title>CGV</title>
+    <script src="./assets/js/slider.js">
+    </script>
     <style>
-
-
         #slider{
             background-image: url("assets/img/slider/background.png");
         }
@@ -102,7 +102,6 @@
         </div>
     </div>
     <jsp:include page="footer.jsp"/>
-    <script src="./assets/javascript/slider/front_back_content.js">
-    </script>
+
 </body>
 </html>

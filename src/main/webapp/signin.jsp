@@ -20,7 +20,7 @@
     <jsp:include page="header.jsp"/>
     <div class="container">
         <div class="login-content">
-            <form action="signin" method="post" class="login__form">
+            <form action="account" method="post" class="login__form">
                 <div class="login__heading">
                     <h1 class="login__title">Đăng nhập tài khoản</h1>
                     <p class="login__description">

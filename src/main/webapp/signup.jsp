@@ -49,7 +49,7 @@
                 <div class="register-form-form">
                     <label for="Email" class="register-form-label">Email<span
                             class="required">*</span></label><br>
-                    <input name="email" type="password" class="register-form-input" placeholder="Email" required id="Email">
+                    <input name="email" type="text" class="register-form-input" placeholder="Email" required id="Email">
                 </div>
                 <div class="register-form-form">
                     <label for="Password" class="register-form-label">Password <span

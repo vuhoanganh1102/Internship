@@ -2,14 +2,44 @@ package model;
 
 public class product {
     private int id;
-    private String image_film;
+    private String image;
+    private String name;
+    private int price;
+    private int number;
+
 
     public product(){
 
     }
-    public product(int id, String image_film){
+    public product(int id, String image, String name, int price, int number){
         this.id=id;
-        this.image_film=image_film;
+        this.image = image;
+        this.name= name;
+        this.price= price;
+        this.number= number;
+    }
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
     }
 
     public int getId() {
@@ -20,19 +50,24 @@ public class product {
         this.id = id;
     }
 
-    public String getImage_film() {
-        return image_film;
+    public String getImage() {
+        return image;
     }
 
-    public void setImage_film(String image_film) {
-        this.image_film = image_film;
+    public void setImage(String image) {
+        this.image = image;
     }
 
     @Override
     public String toString() {
         return "product{" +
                 "id=" + id +
-                ", image_film='" + image_film + '\'' +
+                ", image='" + image + '\'' +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                ", number=" + number +
                 '}';
     }
+
+
 }

@@ -32,26 +32,45 @@
                     <img src="./assets/img/header1/recruitment_icon1.png" alt="">
                     <a href="tuyendung.jsp">Tuyển dụng</a>
                 </li>
-                <li>
-                    <img src="./assets/img/header1/icon_promotion25.png" alt="">
-                    <a href="">Tin mới & ưu đãi</a>
-                </li>
-                <li>
-                    <img src="./assets/img/header1/icon_ticket25.png" alt="">
-                    <a href="signin.jsp">Vé của tôi</a>
-                </li>
-                <li>
-                    <img src="./assets/img/header1/icon_login25.png" alt="">
-                    <a href="signin.jsp">Đăng nhập</a>\
-                    <a href="signup.jsp">Đăng ký</a>
-                </li>
+                <c:if test="${sessionScope.acc == null}">
+                    <li>
+                        <img src="./assets/img/header1/icon_promotion25.png" alt="">
+                        <a href="signin.jsp">Kho phim</a>
+                    </li>
+                    <li>
+                        <img src="./assets/img/header1/icon_ticket25.png" alt="">
+                        <a href="signin.jsp">Vé của tôi</a>
+                    </li>
+                    <li>
+                        <img src="./assets/img/header1/icon_login25.png" alt="">
+                        <a href="signin.jsp">Đăng nhập</a>
+                        <a href="signup.jsp">Đăng ký</a>
+                    </li>
+                </c:if>
+                <c:if test="${sessionScope.acc != null}">
+                    <li>
+                        <img src="./assets/img/header1/icon_promotion25.png" alt="">
+                        <a href="allProduct">Kho phim</a>
+                    </li>
+                    <li>
+                        <img src="./assets/img/header1/icon_ticket25.png" alt="">
+                        <a href="cart.jsp">Vé của tôi</a>
+                    </li>
+                    <li>
+                        <img src="./assets/img/header1/icon_login25.png" alt="">
+                        <a href="">${sessionScope.acc.name}</a>
+                        <a href="logout">Đăng xuất</a>
+                    </li>
+                </c:if>
+
+
             </ul>
         </div>
     </div>
     <div id="header2">
         <ul class="header2_nav">
             <li class="header2_img">
-                <a href="home.jsp"><img src="./assets/img/header2/cgvlogo.png" alt=""></a>
+                <a href="home"><img src="./assets/img/header2/cgvlogo.png" alt=""></a>
             </li>
             <li>
                 <a href="">Phim</a>
