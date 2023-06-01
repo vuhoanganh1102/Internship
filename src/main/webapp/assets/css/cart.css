@@ -1,0 +1,83 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.d-flex-t{
+    display: flex;
+    flex-direction: column;
+    border: solid;
+    padding: 10px;
+
+    align-items: center;
+}
+.d-flex-t h3{
+    font-size: 30px;
+    background-color: #fdf7dd;
+    border: solid;
+    border-radius: 20px;
+    padding: 5px;
+}
+.d-flex-t .mx-3{
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: #e71a0f;
+    border: solid;
+    border-radius: 20px;
+    padding: 5px;
+
+}
+.table{
+    padding: 5px;
+    margin: 50px 0;
+    border: solid;
+    background-color:#fdf7dd;
+}
+.table th{
+    padding: 10px 100px;
+}
+.table td{
+    background-color: #fff;
+    padding: 20px 100px;
+}
+.table td .btn-danger{
+    text-decoration: none;
+    color: #000;
+    background-color: #e71a0f;
+    padding: 10px;
+    border: solid 2px;
+    border-radius: 80px;
+}
+.table form{
+    display: flex;
+    flex-direction:row;
+}
+.table form .form-group{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.table form .form-control{
+    padding: 5px 20px;
+    border-radius: 10px;
+}
+.table form .btn-incre, .btn-decre{
+    color: #000;
+    width: 20px;
+    background-color: #e71a0f;
+    border-radius: 10px;
+    border: solid 2px;
+    margin: 4px;
+}
+.table form .btn-primary{
+    background-color: #e71a0f;
+    padding: 0 20px;
+    border-radius: 20px;
+}

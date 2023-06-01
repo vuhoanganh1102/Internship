@@ -148,6 +148,29 @@ public class DAO {
         }
         return book;
     }
+    public int getTotalCartPrice(ArrayList<Cart> cartList) {
+        int sum = 0;
+        conn = new ConnectDB().getConnection();
+        try {
+            if (cartList.size() > 0) {
+                for (Cart item : cartList) {
+                    String query = "select price from product where id=?";
+                    ps = conn.prepareStatement(query);
+                    ps.setInt(1, item.getId());
+                    rs = ps.executeQuery();
+                    while (rs.next()) {
+                        sum+=rs.getInt("price")*item.getQuantity();
+                    }
+
+                }
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println(e.getMessage());
+        }
+        return sum;
+    }
     public static void main(String[] args) {
         DAO dao=new DAO();
         /*List<product> list= dao.getAllProduct();
