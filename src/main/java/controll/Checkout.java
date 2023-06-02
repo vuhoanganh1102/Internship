@@ -89,8 +89,9 @@ public class Checkout extends HttpServlet{
 
                 cart_list.clear();
 
-                response.sendRedirect("cart.jsp");
-                System.out.println();
+                response.sendRedirect("Bill.jsp");
+
+
             }else {
                 if(a == null) {
                     response.sendRedirect("signin.jsp");

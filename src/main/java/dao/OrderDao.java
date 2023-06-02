@@ -3,7 +3,7 @@ package dao;
 import context.ConnectDB;
 
 import java.sql.*;
-import java.util.Map;
+import java.util.*;
 
 import model.*;
 public class OrderDao {
@@ -45,6 +45,34 @@ public class OrderDao {
         }
         return result;
     }
+    public List<Order> userOrders(int id) {
+        List<Order> list = new ArrayList<>();
+        try {
+            conn = new ConnectDB().getConnection();
+            String query = "select * from orders where u_id=? order by orders.o_id desc";
+            ps = conn.prepareStatement(query);
+            ps.setInt(1, id);
+            rs = ps.executeQuery();
+            while (rs.next()) {
 
+                Order order = new Order();
+                DAO productDao = new DAO();
+                int pId = rs.getInt("p_id");
+                product product = productDao.getSingleProduct(pId);
+                order.setOrderId(rs.getInt("o_id"));
+                order.setId(pId);
+                order.setName(product.getName());
+                order.setPrice(product.getPrice()*rs.getInt("o_quantity"));
+                order.setQuantity(rs.getInt("o_quantity"));
+                order.setDate(rs.getString("o_date"));
+                order.setBill_code(rs.getString("bill_code"));
+                list.add(order);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println(e.getMessage());
+        }
+        return list;
+    }
 
 }

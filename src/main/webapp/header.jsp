@@ -40,6 +40,8 @@
                     <li>
                         <img src="./assets/img/header1/icon_ticket25.png" alt="">
                         <a href="signin.jsp">Vé của tôi</a>
+                        <span>/</span>
+                        <a href="Bill.jsp">Order History</a>
                     </li>
                     <li>
                         <img src="./assets/img/header1/icon_login25.png" alt="">
@@ -55,6 +57,8 @@
                     <li>
                         <img src="./assets/img/header1/icon_ticket25.png" alt="">
                         <a href="cart.jsp">Vé của tôi</a>
+                        <span>/</span>
+                        <a href="Bill.jsp">Order History</a>
                     </li>
                     <li>
                         <img src="./assets/img/header1/icon_login25.png" alt="">

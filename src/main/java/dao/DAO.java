@@ -172,6 +172,30 @@ public class DAO {
         }
         return sum;
     }
+    public product getSingleProduct(int id) {
+        product row = null;
+        try {
+            conn = new ConnectDB().getConnection();
+            String query = "select * from product where id=? ";
+
+            ps = conn.prepareStatement(query);
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                row = new product();
+                row.setId(rs.getInt("id"));
+                row.setName(rs.getString("name"));
+                row.setPrice(rs.getInt("price"));
+                row.setImage(rs.getString("image"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println(e.getMessage());
+        }
+
+        return row;
+    }
     public static void main(String[] args) {
         DAO dao=new DAO();
         /*List<product> list= dao.getAllProduct();

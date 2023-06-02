@@ -43,6 +43,7 @@
 <body>
 <jsp:include page="header.jsp"/>
 <div class="container my-3">
+
     <div class="d-flex-t py-3"><h3>Total Price:${total}</h3> <a class="mx-3 btn btn-primary" href="cart-check-out">Check Out</a></div>
     <table class="table table-light">
         <thead>
@@ -78,7 +79,7 @@
         <%}}%>
         </tbody>
     </table>
-    <a href="Bill.jsp"><h3>Click me!!!!</h3></a>
+
 </div>
 <jsp:include page="footer.jsp"/>
 </body>
