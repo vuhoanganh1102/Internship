@@ -13,6 +13,7 @@
 <%@page import="dao.*"%>
 <%@ page import="context.ConnectDB" %>
 <%
+    Account a = (Account) request.getSession().getAttribute("acc");
     ArrayList<Cart> cart_list = (ArrayList<Cart>) session.getAttribute("cart-list");
     List<Cart> cartProduct = null;
     if (cart_list != null) {
@@ -42,7 +43,7 @@
 <body>
 <jsp:include page="header.jsp"/>
 <div class="container my-3">
-    <div class="d-flex-t py-3"><h3>Total Price:${total}</h3> <a class="mx-3 btn btn-primary" href="">Check Out</a></div>
+    <div class="d-flex-t py-3"><h3>Total Price:${total}</h3> <a class="mx-3 btn btn-primary" href="cart-check-out">Check Out</a></div>
     <table class="table table-light">
         <thead>
         <tr>
@@ -55,7 +56,7 @@
         <tbody>
         <% if(cart_list != null ){for (Cart c : cartProduct) {%>
         <tr>
-            <td><%=c.getName()%></td>
+            <td><%= c.getName()%></td>
             <td><%= c.getPrice()%></td>
             <td>
                 <form action="order-now" method="post" class="form-inline">
@@ -69,7 +70,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M400 256H112"/></svg>
                         </a>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-sm"><b>Buy</b></button>
+                    <!--<button type="submit" class="btn btn-primary btn-sm"><b>Buy</b></button>-->
                 </form>
             </td>
             <td><a href="remove-from-cart?id=<%=c.getId() %>" class="btn btn-sm btn-danger"><b>Remove</b></a></td>
@@ -77,6 +78,7 @@
         <%}}%>
         </tbody>
     </table>
+    <a href="Bill.jsp"><h3>Click me!!!!</h3></a>
 </div>
 <jsp:include page="footer.jsp"/>
 </body>

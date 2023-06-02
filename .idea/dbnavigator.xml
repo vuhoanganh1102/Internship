@@ -35,6 +35,7 @@
         <condition column="id" operator="=" value="" active="true" />
       </filter>
     </filter-actions>
+    <filter-actions connection-id="8e4fb90f-eef9-459c-ba80-772f2796e62a" dataset="hanh_dbb.orders" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="8e4fb90f-eef9-459c-ba80-772f2796e62a" dataset="hanh_dbb.account" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">

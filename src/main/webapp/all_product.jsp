@@ -53,8 +53,8 @@
                     <h1>${i.name}</h1>
                 </div>
                 <div class="price_product">
-                    <h2>${i.price}</h2>
-                    <h3 style="padding-left: 10px;">${i.number}</h3>
+                    <h2>Price: ${i.price}</h2>
+                    <h3 style="padding-left: 10px;">Quantity: ${i.number}</h3>
                 </div>
                 <div class="footer_product">
                     <div class="detail_product or_product">
